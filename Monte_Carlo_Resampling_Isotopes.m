@@ -4,11 +4,11 @@ clear; clc;
 close all;
 
 % import data
-BD = readtable('file path of Antarctic RPO-14C dataset.xlsx','Sheet','bulk & RPO');
-FD = readtable('file path of Antarctic RPO-14C dataset.xlsx','Sheet','RPO fracs');
+BD = readtable('file path of 20260320 Antarctic RPO-14C dataset.xlsx','Sheet','Bulk');
+FD = readtable('file path of 20260320 Antarctic RPO-14C dataset.xlsx','Sheet','RPO fractions');
 
-d13C = table2array(BD(:,15));
-Fm = table2array(BD(:,16));
+d13C = table2array(BD(1:12,10));
+Fm = table2array(BD(1:12,11));
 Frac_d13C = table2array(FD(1:16,9));
 Frac_Fm = table2array(FD(1:16,11));
 
